@@ -1,6 +1,6 @@
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g3
 
 LFLAGS = -L../mlx/mlx -lmlx -lXext -lX11 -lm -lz
 
@@ -10,7 +10,7 @@ SRC = $(wildcard *.c)
 
 OBJ = $(SRC:.c=.o)
 
-NAME = my_program
+NAME = cub3D
 
 all: $(NAME)
 

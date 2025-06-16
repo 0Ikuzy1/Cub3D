@@ -6,7 +6,7 @@
 /*   By: ozouine <ozouine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 03:42:18 by iqattami          #+#    #+#             */
-/*   Updated: 2025/06/13 23:44:21 by ozouine          ###   ########.fr       */
+/*   Updated: 2025/06/16 16:03:39 by ozouine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,19 +90,18 @@ int	main(int ac, char **av)
 	t_game	game;
 	t_map	*da;
 
-	(void)ac;
+	if (ac != 2 || pars_extension(av[1], ".cub") != 0)
+		return (write(1, "ERROR\n", 6), 1);
 	pars = NULL;
 	da = NULL;
 	pars = get_pars(pars, &game);
 	if (!pars)
 	{
-		destroy_all(&game, da, pars);
 		return (write(1, "ERROR\n", 6), 1);
 	}
 	da = get_data(av[1], da);
 	if (!da)
 	{
-		destroy_all(&game, da, pars);
 		return (write(1, "ERROR\n", 7), 1);
 	}
 	init_game(&game, da, pars);

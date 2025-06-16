@@ -6,7 +6,7 @@
 /*   By: ozouine <ozouine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 16:51:37 by iqattami          #+#    #+#             */
-/*   Updated: 2025/06/13 23:40:36 by ozouine          ###   ########.fr       */
+/*   Updated: 2025/06/16 16:03:21 by ozouine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -276,10 +276,6 @@ int					double_char(t_map *d);
 int					is_map_surrounded(t_map *d);
 int					handle_close(t_game *game);
 int					check_table(char **t);
-void	free_parse(t_parse *parse);
-void	free_map(t_map *map);
-void	free_textures_paths(t_textures *tex);
-void	free_game(t_game *game);
-void	destroy_all(t_game *game, t_map *map, t_parse *parse);
+int					pars_extension(char *s, char *s2);
 
 #endif
